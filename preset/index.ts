@@ -11,16 +11,14 @@ const preset = {
 				DEFAULT: '#176A98',
 				light: '#2690C4'
 			},
-			light: '#F3F4F5',
-			dark: '#0E1721',
 			gray: {
-				light: '#B6B9BC',
+				light: '#F3F4F5',
 				DEFAULT: '#878C91',
-				dark: '#565D64'
+				dark: '#0E1721'
 			}
 		},
 		fontFamily: {
-			sans: ['rpc', ...fontFamily.sans]
+			sans: ['Poppins', ...fontFamily.sans]
 		},
 		container: {
 			center: true,
@@ -42,8 +40,9 @@ const preset = {
 		extend: {}
 	},
 	plugins: [
+		require('./hero.ts'),
+		require('./buttons.ts')
 		// require('./layout.cjs'),
-		// require('./buttons.cjs'),
 		// require('./card.cjs'),
 		// require('./forms.cjs'),
 		// require('./font.cjs'),
