@@ -10,23 +10,22 @@ module.exports = plugin(function ({ addComponents, theme, config }) {
 	const shadow = config('theme.boxShadow');
 	const fontSize = config('theme.fontSize');
 	const fontWeight = config('theme.fontWeight');
+	const colors = config('theme.colors');
 
 	addComponents({
-		'.hero': {
-			letterSpacing: space['0.5'],
-			backgroundColor: theme('colors.gray.dark'),
-			color: theme('colors.gray.light'),
-			padding: space['12'],
-			fontWeight: fontWeight.bold,
-			fontSize: fontSize['2xl'],
+		'.card': {
+			backgroundColor: colors['white'],
+			padding: space['2'],
+			borderWidth: '1px',
 			borderRadius: radius['sm'],
+			boxShadow: shadow['md'],
 			[sm]: {
-				padding: space['8']
+				padding: space['4']
 			}
 		},
-		'.hero-light': {
-			backgroundColor: theme('colors.gray.light'),
-			color: theme('colors.dark')
+		'.section': {
+			backgroundColor: colors.gray['light'],
+			color: 'var(--color-content)'
 		}
 	});
 });

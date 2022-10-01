@@ -10,23 +10,25 @@ module.exports = plugin(function ({ addComponents, theme, config }) {
 	const shadow = config('theme.boxShadow');
 	const fontSize = config('theme.fontSize');
 	const fontWeight = config('theme.fontWeight');
+	const outlineWidth = config('theme.outlineWidth');
+	const colors = config('theme.colors');
 
 	addComponents({
-		'.hero': {
-			letterSpacing: space['0.5'],
-			backgroundColor: theme('colors.gray.dark'),
-			color: theme('colors.gray.light'),
-			padding: space['12'],
-			fontWeight: fontWeight.bold,
-			fontSize: fontSize['2xl'],
+		'.tag': {
+			backgroundColor: colors.gray['light'],
+			color: colors.gray['dark'],
+			display: 'inline-flex',
+			alignItems: 'center',
+			verticalAlign: 'middle',
+			justifyContent: 'center',
+			padding: space['1'] + ' ' + space['2'],
+			fontSize: fontSize['xs'],
 			borderRadius: radius['sm'],
-			[sm]: {
-				padding: space['8']
+			userSelect: 'none',
+			'&.primary': {
+				backgroundColor: colors.primary['dark'],
+				color: colors.gray['light']
 			}
-		},
-		'.hero-light': {
-			backgroundColor: theme('colors.gray.light'),
-			color: theme('colors.dark')
 		}
 	});
 });

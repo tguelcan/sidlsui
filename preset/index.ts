@@ -18,7 +18,7 @@ const preset = {
 			}
 		},
 		fontFamily: {
-			sans: ['Poppins', ...fontFamily.sans]
+			sans: ['Nato Sans', ...fontFamily.sans]
 		},
 		container: {
 			center: true,
@@ -41,8 +41,10 @@ const preset = {
 	},
 	plugins: [
 		require('./hero.ts'),
-		require('./buttons.ts')
-		// require('./layout.cjs'),
+		require('./buttons.ts'),
+		require('./card.ts'),
+		require('./input.ts'),
+		require('./tag.ts')
 		// require('./card.cjs'),
 		// require('./forms.cjs'),
 		// require('./font.cjs'),
